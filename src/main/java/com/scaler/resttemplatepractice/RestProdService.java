@@ -17,7 +17,7 @@ public class RestProdService {
     public FakeProduct getProdById(int id) {
         String fakeurl = "https://fakestoreapi.com/products/"+ id;
         ResponseEntity<FakeProduct> responseEntity = restTemplate.getForEntity(fakeurl, FakeProduct.class);
-        System.out.println(responseEntity);
+       // System.out.println(responseEntity);
         return responseEntity.getBody();
 
     }
