@@ -15,11 +15,18 @@ public class RestProdController {
     public RestProdController(RestProdService restProdService){
         this.restProdService = restProdService;
     }
+    /*
     @GetMapping("/products/{id}")
     public ResponseEntity getProdById(@PathVariable("id") int prodId){
         FakeProduct product  = restProdService.getProdById(prodId);
         return ResponseEntity.ok(product);
     }
+*/
 
+    @GetMapping("/products/{id}")
+    public FakeProduct getProdById(@PathVariable("id") int prodId){
+        return restProdService.getProdById(prodId);
+
+    }
 }
 
